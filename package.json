@@ -1,0 +1,28 @@
+{
+  "name": "git_infra",
+  "version": "1.0.0",
+  "description": "Automated Git Infrastructure Agent",
+  "main": "main.js",
+  "type": "module",
+  "scripts": {
+    "start": "node main.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "git",
+    "automation",
+    "github-cli"
+  ],
+  "author": "Rabi Aryal",
+  "license": "ISC",
+  "dependencies": {
+    "chalk": "^5.3.0",
+    "dotenv": "^16.4.5",
+    "fs-extra": "^11.2.0",
+    "readline-sync": "^1.4.10",
+    "simple-git": "^3.24.0"
+  },
+  "bin": {
+    "git-infra": "./main.js"
+  }
+}
