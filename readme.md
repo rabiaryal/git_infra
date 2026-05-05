@@ -98,5 +98,75 @@ To transform your workflow, ensure you have the [GitHub CLI (gh)](https://cli.gi
 
 Automation isn't just about saving seconds; it's about reducing the cognitive load. By moving the "plumbing" of GitHub management into a single, intelligent CLI, `git-infra` allows you to focus on what actually matters: **writing great code.**
 
+
+## HEADLINE: Faster repos, clearer docs — git-infra ships concise command set
+
+Lede: Today, git-infra simplifies repository creation, syncing, and AI-driven documentation into a single CLI. Below is a concise briefing on the commands developers rely on when they need speed without guesswork.
+
+The commands are presented as short news briefs — each has a headline, a one-line summary, and a usage example.
+
+**setup — System Check**
+
+Summary: Runs a quick diagnostic to confirm Git and the GitHub CLI (`gh`) are present and authenticated on this machine. Use this as a smoke test before doing networked operations.
+
+Usage:
+```bash
+git-infra setup
+```
+
+**new — Initialize a Project**
+
+Summary: Creates or initializes a local folder, makes an initial commit, and provisions a matching GitHub repository (public by default). Use `--private` to create a private repo.
+
+Usage:
+```bash
+git-infra new my-awesome-app
+# Private example:
+git-infra new my-secret-app --private
+```
+
+**push — Smart Syncing**
+
+Summary: An interactive push workflow that detects your branch, asks for a target, and only commits when changes exist. It prevents empty commits and accidental pushes.
+
+Usage:
+```bash
+git-infra push "Update database logic"
+# Or run interactively:
+git-infra push
+```
+
+**doc — AI-Generated README**
+
+Summary: Invokes the Gemini AI Agent to analyze your repository structure and produce a Medium-style `README.md`. The generated document replaces the existing README with a more narrative, publish-ready article.
+
+Usage:
+```bash
+git-infra doc
+```
+
+**publish — Full Pipeline**
+
+Summary: Regenerates the README via the AI pipeline and copies the formatted content to your clipboard for instant pasting into blogs or drafts.
+
+Usage:
+```bash
+git-infra publish
+```
+
+**test-ai — API Health Check**
+
+Summary: Verifies connectivity and credentials for Google AI Studio using `GEMINI_API_KEY` so you can trust that `doc` and `publish` will succeed.
+
+Usage:
+```bash
+git-infra test-ai
+```
+
+---
+
 ---
 *Developed for engineers who value flow.* 🚀
+
+---
+
